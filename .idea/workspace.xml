@@ -9,24 +9,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6c8ede-4ce0-4993-b262-f8aeaa554eb7" name="Changes" comment="Database added and filled with info from json file.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/HotelDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/ReservationDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/RoomDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/repository/DBInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/repository/DBUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/HotelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/RoomService.java" afterDir="false" />
+    <list default="true" id="0b6c8ede-4ce0-4993-b262-f8aeaa554eb7" name="Changes" comment="Everything up until servlets is done.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/SearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/bookingForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/feedbackConfirmation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/feedbackForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hotelDetails.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reservationCancellation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reservationChange.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reservationConfirmation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/hotelList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ebb8d70-d914-47ae-bf72-8af247a83299.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0ebb8d70-d914-47ae-bf72-8af247a83299.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0ebb8d70-d914-47ae-bf72-8af247a83299/storage_v2/_src_/schema/hotel_reservations.0kKYAg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0ebb8d70-d914-47ae-bf72-8af247a83299/storage_v2/_src_/schema/hotel_reservations.0kKYAg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/FeedbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/FeedbackServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/domain/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/HotelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/HotelServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/domain/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/RoomServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/RoomServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbinfo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbinfo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/FeedbackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/FeedbackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/HotelDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/HotelDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/ReservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/ReservationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/dao/RoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/FeedbackService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/FeedbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/FeedbackServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/HotelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/HotelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/RoomServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelreservations/servlets/RoomServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +46,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/hotelList.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -59,36 +72,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bianca/Downloads/mysql-connector-j-8.4.0.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.20066519&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Bianca/Downloads/mysql-connector-j-8.4.0.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.20066519",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bianca\Documents\Hotel_Reservation_Manager\HotelReservations\src\main\webapp" />
+      <recent name="C:\Users\Bianca\Documents\Hotel_Reservation_Manager\HotelReservations\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Bianca\Documents\Hotel_Reservation_Manager\HotelReservations\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\Bianca\Documents\Hotel_Reservation_Manager\HotelReservations\src\main\resources" />
     </key>
   </component>
@@ -193,6 +210,7 @@
       <updated>1715963000473</updated>
       <workItem from="1715963001557" duration="15843000" />
       <workItem from="1716008544130" duration="237000" />
+      <workItem from="1716008792443" duration="17338000" />
     </task>
     <task id="LOCAL-00001" summary="Working website.">
       <option name="closed" value="true" />
@@ -218,7 +236,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715968642203</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Everything up until servlets is done.">
+      <option name="closed" value="true" />
+      <created>1716010473135</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716010473135</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Everything up until servlets is done.">
+      <option name="closed" value="true" />
+      <created>1716010682324</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716010682324</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +261,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working website." />
     <MESSAGE value="Database added and filled with info from json file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Database added and filled with info from json file." />
+    <MESSAGE value="Everything up until servlets is done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything up until servlets is done." />
   </component>
 </project>

@@ -1,46 +1,75 @@
 package com.example.hotelreservations;
-import com.example.hotelreservations.domain.Hotel;
-import com.example.hotelreservations.domain.Room;
-import com.example.hotelreservations.repository.DBInitializer;
-import com.google.gson.Gson;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import com.example.hotelreservations.dao.HotelDAO;
+import com.example.hotelreservations.domain.Hotel;
+import com.example.hotelreservations.service.HotelService;
+import com.example.hotelreservations.repository.DBUtil;
+
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        // Create a connection
+        Connection connection = DBUtil.getConnection();
+
+        // Create an instance of HotelDAO
+        HotelDAO hotelDAO = new HotelDAO(connection);
+
+        // Create an instance of HotelService with the HotelDAO
+        HotelService hotelService = new HotelService(hotelDAO);
+
+        // Test getAllHotels method
+        testGetAllHotels(hotelService);
+
+        // Test getNearbyHotels method
+        testGetNearbyHotels(hotelService, 46.77, 23.59, 5.0); // Example coordinates and radius
+    }
+
+    private static void testGetAllHotels(HotelService hotelService) {
+        System.out.println("Testing getAllHotels method...");
+
         try {
-            Properties properties = new Properties();
-            try (InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("dbinfo.properties")) {
-                properties.load(inputStream);
-            } catch (IOException e) {
-                e.printStackTrace();
+            // Retrieve all hotels
+            List<Hotel> hotels = hotelService.getAllHotels();
+
+            // Print hotel information
+            for (Hotel hotel : hotels) {
+                System.out.println("Hotel ID: " + hotel.getId());
+                System.out.println("Hotel Name: " + hotel.getName());
+                System.out.println("Latitude: " + hotel.getLatitude());
+                System.out.println("Longitude: " + hotel.getLongitude());
+                System.out.println();
             }
 
-            String url = properties.getProperty("db.url");
-            String username = properties.getProperty("db.username");
-            String password = properties.getProperty("db.password");
-            Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println("Total hotels retrieved: " + hotels.size());
+        } catch (Exception e) {
+            System.err.println("Error occurred while fetching hotels: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 
-            Gson gson = new Gson();
-            FileReader reader = new FileReader("src/main/resources/hotels.json");
-            Hotel[] hotels = gson.fromJson(reader, Hotel[].class); // telling gson to parse the json data into an array of hotel objects
+    private static void testGetNearbyHotels(HotelService hotelService, double latitude, double longitude, double radius) {
+        System.out.println("Testing getNearbyHotels method...");
 
-            String insertHotel = "INSERT INTO hotels (id, name, latitude, longitude) VALUES (?, ?, ?, ?)";
-            String insertRoom = "INSERT INTO rooms (hotel_id, roomNumber, type, price, isAvailable) VALUES (?, ?, ?, ?, ?)";
-            PreparedStatement hotelStatement = connection.prepareStatement(insertHotel);
-            PreparedStatement roomStatement = connection.prepareStatement(insertRoom);
+        try {
+            // Retrieve nearby hotels
+            List<Hotel> nearbyHotels = hotelService.getNearbyHotels(latitude, longitude, radius);
 
-            DBInitializer.hotel_stat(hotels, hotelStatement, roomStatement);
-        } catch (FileNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
+            // Print nearby hotel information
+            for (Hotel hotel : nearbyHotels) {
+                System.out.println("Hotel ID: " + hotel.getId());
+                System.out.println("Hotel Name: " + hotel.getName());
+                System.out.println("Latitude: " + hotel.getLatitude());
+                System.out.println("Longitude: " + hotel.getLongitude());
+                System.out.println();
+            }
+
+            System.out.println("Total nearby hotels retrieved: " + nearbyHotels.size());
+        } catch (Exception e) {
+            System.err.println("Error occurred while fetching nearby hotels: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

@@ -1,4 +1,6 @@
 package com.example.hotelreservations.servlets;
 
-public class RoomServlet {
+import jakarta.servlet.http.HttpServlet;
+
+public class RoomServlet extends HttpServlet {
 }

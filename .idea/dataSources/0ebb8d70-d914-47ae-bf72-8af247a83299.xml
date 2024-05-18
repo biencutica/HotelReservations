@@ -1028,8 +1028,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="288" parent="1" name="hotel_reservations">
-      <IntrospectionTimestamp>2024-05-18.11:20:34</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-05-18.05:20:34</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-05-18.13:29:54</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-05-18.07:29:54</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="289" parent="1" name="information_schema">

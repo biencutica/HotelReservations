@@ -49,4 +49,12 @@ public class RoomService {
             throw new RuntimeException("Error fetching rooms for hotel with ID: " + hotelId, e);
         }
     }
+
+    public List<Room> getAvailableRoomsForHotel(int hotelId) {
+        try {
+            return roomDAO.getAvailableRoomsForHotel(hotelId);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving available rooms for hotel with ID: " + hotelId, e);
+        }
+    }
 }
