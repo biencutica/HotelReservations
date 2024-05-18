@@ -35,11 +35,11 @@ public class ReservationService {
         }
     }
 
-    public void deleteReservation(int reservationId) {
+    public void cancelReservation(int reservationId) {
         try {
             reservationDAO.deleteReservation(reservationId);
         } catch (SQLException e) {
-            throw new RuntimeException("Error deleting reservation with ID: " + reservationId, e);
+            throw new RuntimeException("Error cancelling reservation with ID: " + reservationId, e);
         }
     }
 
