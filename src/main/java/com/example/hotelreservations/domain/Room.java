@@ -1,4 +1,4 @@
-package com.example.hotelreservations;
+package com.example.hotelreservations.domain;
 
 public class Room {
     private int roomNumber;

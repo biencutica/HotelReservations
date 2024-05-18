@@ -1,4 +1,4 @@
-package com.example.hotelreservations;
+package com.example.hotelreservations.domain;
 
 import java.util.List;
 
@@ -15,6 +15,13 @@ public class Hotel {
         this.latitude = latitude;
         this.longitude = longitude;
         this.rooms = rooms;
+    }
+
+    public Hotel(int id, String name, double latitude, double longitude) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public int getId() {
